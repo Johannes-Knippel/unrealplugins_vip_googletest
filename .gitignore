@@ -1,0 +1,15 @@
+#Ignore Folders
+**/Autosaves/*
+**/Intermediate/*
+**/Saved/*
+**/DerivedDataCache/*
+**/Binaries/*
+**/*.sln
+**/.vs/*
+*.dll
+*.pdb
+*.-Shipping.*
+**/Logs/*
+**/.idea/*
+**/.vscode/*
+*.sln.DotSettings.user
