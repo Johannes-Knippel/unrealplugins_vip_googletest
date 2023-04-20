@@ -35,7 +35,7 @@ For this, we rely on the principle of **Dependency Injection** (as an applicatio
 We define the interface contracts that are required by the business logic in the Domain layer. The actual implementation is part of the External layer and is bound to the interface.
 
 
-![Scheme](imgs/IoC.png)
+![Scheme](imgs/I_o_C.png)
 
 These bindings are registered in a TTypeContainer at module startup:
 ```c++
@@ -66,14 +66,13 @@ A VIP cycle always consists of a **View**, an **Interactor** and a **Presenter**
 An interaction in the View triggers a request to the Interactor. The Interactor process the request and performs the required business logic, accessing services if needed.
 The result is then forwarded to the Presenter as a response, which gets transformed into a viewmodel and handed back to the view.
 
-![Scheme](imgs/VIP.png)
+![Scheme](imgs/V_I_P.png)
 
 A plug-in is usually divided into multiple scenes. Each scene has an underlying VIP cycle and offers several use-cases. Let's say a list of items and details panel for each item.
 
 The VIP pattern fits nicely into the layers of the Clean Architecture: Interactors define the business logic and are as such part of the Domain layer. 
 The View and the Presenter are linked to the plug-in's UI and are placed in the External module.
 
-![Scheme](imgs/CleanArchitectureVIP.png)
 
 ### VIP Cycle Extensions
 There are two more important components in this plug-ins: the **SceneRouter** and the **DataStores**.<br/>
