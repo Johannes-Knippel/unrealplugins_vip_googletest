@@ -23,7 +23,7 @@ In plug-ins we create an Unreal module for each layer. The typical plug-in will 
 - External
 - Domain
 
-![Scheme](imgs/CleanArchitectureDVPE.png)
+![Scheme](imgs/CleanArchitecturePlugin.png)
 
 <span style="color:red">! Important !</span>
 The Domain layer contains only the data objects and the business logic and will consequently only have a dependency of the Unreal "Core" module. If you feel the need to add another dependency, it's very likely that your layers are not cleanly separated.
