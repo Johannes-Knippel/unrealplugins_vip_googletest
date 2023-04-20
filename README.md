@@ -11,7 +11,7 @@ Outer layers contain for example UI, databases or access to external services ov
 
 ![Scheme](imgs/CleanArchitecture.png)
 
-The overriding rule that makes this architecture work is The Dependency Rule. This rule says that source code dependencies can only point inwards. Nothing in an inner circle can know anything at all about something in an outer circle. In particular, the name of something declared in an outer circle must not be mentioned by the code in the an inner circle. That includes, functions, classes. variables, or any other named software entity.
+The overriding rule that makes this architecture work is The Dependency Rule. This rule says that source code dependencies can only point inwards. Nothing in an inner circle can know anything at all about something in an outer circle. In particular, the name of something declared in an outer circle must not be mentioned by the code in an inner circle. That includes, functions, classes. variables, or any other named software entity.
 
 Also, data formats used in an outer circle should not be used by an inner circle, especially if those formats are influenced by an external system in an outer circle. Nothing from an outer circle should impact the inner circles.
 
